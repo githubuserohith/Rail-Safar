@@ -127,6 +127,8 @@ Enter name, age and gender of each passenger.
 
 ![alt text](https://imgur.com/yZW7NjO.png)
 
+![alt text](https://imgur.com/sfGP1S2.png)
+
 
 ## Change password
 
@@ -136,7 +138,6 @@ Enter name, age and gender of each passenger.
 
 * Once changed, you'll be logged out of the system and have to login using the new password.
 
-![alt text](https://imgur.com/sfGP1S2.png)
 
 ![alt text](https://imgur.com/zlrbb1h.png)
 
