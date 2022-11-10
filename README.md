@@ -3,6 +3,20 @@
 
 A train management system built using Django framework. It is designed for passengers/clients to book train tickets.
 
+
+## This system is built for the purpose:
+
+* Signup, Login and Logout security
+* Search train
+* View train Timetable
+* Check seat availability
+* Login with OTP feature
+* Confirm booking
+* Check Booking history
+* Fare enquiry
+* Cancel booking
+* Change password
+  
 ## Installation
 Python and Django need to be installed
 
@@ -28,6 +42,11 @@ Then go to the browser and enter the url **http://127.0.0.1:8000/railways/login_
 
 * A user cannot jump from one url to another without logging in.
 
+## Sign up
+
+Enter a unique username, email address and password to create an account. The directions for a strong password are also provided.
+
+![alt text](https://imgur.com/tINXbYH.png)
 
 ## Login 
 
@@ -43,10 +62,8 @@ or
 python manage.py createsuperuser --username <username> --password <password>
 
 ```
+![alt text](https://imgur.com/49Ep4De.png)
 
-## Sign up
-
-Enter a unique username, email address and password to create an account. The directions for a strong password are also provided.
 
 ## Login with OTP
 
@@ -56,11 +73,15 @@ Enter a unique username, email address and password to create an account. The di
 
 * You'll be redirected back to login page where you'll have to enter the same username and OTP to login.
 
+![alt text](https://imgur.com/IDo6LIC.png)
+
 ## Search 
 
 * You'll be redirected to this page after logging in.
 
 * Enter origin station, destination and date of journey. 
+
+![alt text](https://imgur.com/x8KqwVW.png)
 
 ## Result
 
@@ -68,13 +89,21 @@ Enter a unique username, email address and password to create an account. The di
 
 * Select the train, coach and total number of passengers.
 
+![alt text](https://imgur.com/NFqsTQv.png)
+
 ## Timetable
 
 Displays the days on which the train runs and the ETA at each station.
 
+![alt text](https://imgur.com/9tDtOSr.png)
+
+
 ## Passenger details
 
 Enter name, age and gender of each passenger.
+
+![alt text](https://imgur.com/KDoO4XF.png)
+
 
 ## Review booking
 
@@ -86,6 +115,8 @@ Enter name, age and gender of each passenger.
 
 * Once confirmed, a confirmation email will be sent to your registered email address with all the details. This also serves the purpose of a ticket.
 
+![alt text](https://imgur.com/Tvh7Aty.png)
+
 ## Booking history
 
 * Once the booking is confirmed, you'll be redirected to this section.
@@ -93,6 +124,11 @@ Enter name, age and gender of each passenger.
 * It displays history of all the bookings done by the user.
 
 * You can also cancel bookings from this section.
+
+![alt text](https://imgur.com/yZW7NjO.png)
+
+![alt text](https://imgur.com/sfGP1S2.png)
+
 
 ## Change password
 
@@ -102,27 +138,6 @@ Enter name, age and gender of each passenger.
 
 * Once changed, you'll be logged out of the system and have to login using the new password.
 
-## Screenshot
-
-![alt text](https://imgur.com/tINXbYH.png)
-
-![alt text](https://imgur.com/49Ep4De.png)
-
-![alt text](https://imgur.com/IDo6LIC.png)
-
-![alt text](https://imgur.com/LaYshnD.png)
-
-![alt text](https://imgur.com/NFqsTQv.png)
-
-![alt text](https://imgur.com/z5C8qWF.png)
-
-![alt text](https://imgur.com/KDoO4XF.png)
-
-![alt text](https://imgur.com/Tvh7Aty.png)
-
-![alt text](https://imgur.com/yZW7NjO.png)
-
-![alt text](https://imgur.com/sfGP1S2.png)
 
 ![alt text](https://imgur.com/zlrbb1h.png)
 
