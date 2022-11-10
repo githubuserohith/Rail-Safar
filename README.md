@@ -1,20 +1,20 @@
 
 # Rail-Safar
 
-A train management system built using Django framework. It is designed for passengers/clients to book train tickets.
+A train management system built using Django framework. It is designed for passengers/users to search,book and cancel train tickets.
 
 
 ## This system is built for the purpose:
 
-* Signup, Login and Logout security
+* Signup, Login and Logout securely
 * Search train
-* View train Timetable
+* View train schedules/timetable
 * Check seat availability
-* Login with OTP feature
+* Login using OTP
 * Confirm booking
-* Check Booking history
+* View booking history
 * Fare enquiry
-* Cancel booking
+* Ticket cancellation
 * Change password
   
 ## Installation
@@ -50,7 +50,7 @@ Enter a unique username, email address and password to create an account. The di
 
 ## Login 
 
-* Enter your username and password to login, if you have already have an account. Else, you'll have to sign up first.
+* If you are an existing user, enter username and password to login. Else, sign up to create an account.
 
 * Also a new admin user can be created using
 
@@ -67,9 +67,9 @@ python manage.py createsuperuser --username <username> --password <password>
 
 ## Login with OTP
 
-* Users who wish to login without signing up can with this section. 
+* Users who haven't signed up can still login by using this feature.
 
-* Enter a unique username and valid email address. OTP will be sent to your entered email. 
+* Enter a unique username and valid email address. OTP will be sent to the email address you entered. 
 
 * You'll be redirected back to login page where you'll have to enter the same username and OTP to login.
 
