@@ -1,0 +1,17 @@
+{% extends "railways/layout.html" %}
+{% block content %}
+<br>
+
+<form method="POST" class="px-3">
+    <div class="text text-primary">
+        <h4><b>Request OTP</b></h4><br>
+    </div>
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Username"> <br><br>
+    </b><input type="email" name="email" placeholder="Email"> <br><br>
+    <button type="submit" name="otp" class="btn btn-success">Get otp</button>
+    &nbsp;&nbsp;<a href="{% url 'login_view' %}">Go back</a>
+
+</form>
+
+{% endblock %}

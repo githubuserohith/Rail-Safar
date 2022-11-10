@@ -1,0 +1,26 @@
+{% extends "railways/layout.html" %}
+{% block content %}
+
+<div class="text text-primary">
+<h4><b>Welcome {{ request.session.username }}</b></h4><br>
+</div>
+<form method="POST" class="px-3">
+    {% csrf_token %}
+    <b>From</b> :
+    <select name="origin" required>
+                <option value="">select origin</option>
+                {% for station in stations_list %}
+                    <option value="{{station}}">{{station}}</option>
+                {% endfor %}
+    </select>
+    <b>To</b> :    <select name="destination" required>
+                <option value="">select destination</option>
+                {% for station in stations_list %}
+                    <option value="{{station}}">{{station}}</option>
+                {% endfor %}
+            </select>
+<br><br><b>Date of Journey </b> <input type="datetime-local" required name="datetime"><br><br>
+<button type="submit" name="search" value="True" class="btn btn-success btn-sm">Search</button>
+</form>
+
+{% endblock %}

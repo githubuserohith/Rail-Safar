@@ -1,0 +1,46 @@
+{% extends "railways/layout.html" %}
+{% block content %}
+<br>
+<form method="POST" class="px-3">
+    {% csrf_token %}
+    <div class="text text-primary">
+        <h4><b>Booking History</b></h4><br>
+    </div>
+<b>Total : {{ p.count }}</b><br><br>
+<table class="table table-primary table-hover table-bordered border-primary table-md">
+    <tr>
+        <th>    </th>
+        <th>Train</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;Name</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;Coach</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOJ</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;From</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;To</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;Select</th>
+
+
+    </tr>
+
+    {% for item in p %}
+
+      <tr>
+          <td>  <li></li>  </td>
+            <td>{{ item.train }}</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp; {{ item.name }}</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ item.coach }}</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ item.doj }}</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ item.origin }}</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ item.destination }}</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="cancel" value="{{item.id}}"></td>
+      </tr>
+
+   {% endfor %}
+
+</table>  <br><br>
+
+<button type="submit" name="submit_cancel" value="True" class="btn btn-danger">Cancel booking</button>&nbsp;&nbsp;
+<button type="reset" value="Reset" class="btn btn-secondary">Reset</button>
+
+</form>
+
+{% endblock %}

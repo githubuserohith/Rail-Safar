@@ -1,0 +1,19 @@
+{% extends "railways/layout.html" %}
+{% block content %}
+
+<form class="px-3">
+<h4>TIMETABLE</h4><br>
+
+Runs on :
+{% for item in days %}
+    {{ item.days }} <b>|</b>
+{% endfor %}
+<br><br>
+{% for item in tt1 %}
+    <li>{{ item.station_code }} : {{ item.timing }} </li>
+{% endfor %}
+<br>
+
+<a href="{% url 'result' %}">Go back</a>
+</form>
+{% endblock %}

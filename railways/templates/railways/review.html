@@ -1,0 +1,28 @@
+{% extends "railways/layout.html" %}
+{% block content %}
+
+<form method="POST" class="px-3">
+    {% csrf_token %}
+    <div class="text text-primary">
+        <h4><b>Booking Details</b></h4>
+    </div>
+
+    {% for item in psg_info %} <br>
+      <b>Passenger: </b>
+        {% for item1 in item %}
+            {{ item1 }} <b>|</b>
+        {% endfor %}
+    {% endfor %}
+
+    <br>
+    <b>Train: </b> {{ train_name }} ({{train_no}}) <br>
+    <b>Coach: </b> {{ coach }}  <br>
+    <b>DOJ: </b>   {{ my_date_str }}    <br>
+    <b>From: </b>   {{ input_origin }} ({{ time_org }} )  <br>
+    <b>To: </b>   {{ input_destination }} ({{ time_des }})   <br><br>
+    <h4><b>Fare: </b> Rs {{ fare }}/-</h4><br>
+
+    <button type="submit" name="confirm" value="True" class="btn btn-success">Confirm booking</button>
+</form>
+
+{% endblock %}

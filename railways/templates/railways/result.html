@@ -1,0 +1,56 @@
+{% extends "railways/layout.html" %}
+{% block content %}
+
+<form method="POST" class="px-3">
+    {% csrf_token %}
+
+   <div class="text text-primary"> <br><h4><b> AVAILABLE TRAINS</b></h4><br></div>
+    <a name="modify" href="{% url 'search' %}">MODIFY SEARCH</a><br><br>
+<table class="table table-primary table-hover table-bordered border-primary table-md">
+    <tr>
+        <th>Number</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;Name</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;Timetable</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;3 AC</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;SL</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;Select</th>
+
+    </tr>
+
+    {% for item1 in s1 %}
+        {% for item in item1 %}
+        <tr>
+            <td>{{ item.train_no.train_no }}</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp; {{ item.train_no.name }}</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" name="tt" value="{{ item.train_no.train_no }}" class="btn btn-info btn-sm">check</button></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;  AVL-{{item.ac}}</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;AVL-{{item.sl}}</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="train" value="{{ item.train_no.train_no }}"></td>
+        </tr>
+        {% endfor %}
+    {% endfor %}
+
+</table><br><br>
+
+<b>Choose seat:  </b>
+3 AC <input type="radio" name="seat" value="3-AC">
+Sleeper <input type="radio" name="seat" value="SL">
+<br><br><br>
+
+<h6>Choose number of passengers:
+    <select name="psg" id="psg">
+        {% for item in "123456" %}
+      <option value="{{item}}">{{item}}</option>
+        {% endfor %}
+    </select></h6>
+<br>
+
+<button type="submit" name="submit_train" value="True" class="btn btn-success">Continue</button>
+<button type="reset" value="Reset" class="btn btn-secondary">Reset</button>
+
+ <br><br>
+
+
+
+</form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "railways/layout.html" %}
+{% block content %}
+
+<form method="POST" class="px-3">
+    {% csrf_token %}
+    <div class="text text-primary">
+        <h4><b>Enter Passenger details</b></h4><br>
+    </div>
+    {% for p in psg %}
+        <b>Passenger {{p}} : </b><br><br>
+        <input type="text" name="name-{{p}}" placeholder="Name"><br><br>
+        <input type="number" name="age-{{p}}" placeholder="Age"><br><br>
+        Male <input type="radio" name="gender-{{p}}" value="Male" class="form-check-input">
+        Female <input type="radio" name="gender-{{p}}" value="Female" class="form-check-input">
+        Others <input type="radio" name="gender-{{p}}" value="Other" class="form-check-input"><br><br>
+    {% endfor %}
+
+    <button type="submit" name="submit_details" value="True" class="btn btn-success">Review Journey</button>
+
+</form>
+{% endblock %}
