@@ -16,6 +16,7 @@ A train management system built using Django framework. It is designed for passe
 * Fare enquiry
 * Ticket cancellation
 * Change password
+* Forgot password
   
 ## Installation
 Python and Django need to be installed
