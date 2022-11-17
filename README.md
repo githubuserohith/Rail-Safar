@@ -73,7 +73,7 @@ python manage.py createsuperuser --username <username> --password <password>
 
 * You'll be redirected back to login page where you'll have to enter the same username and OTP to login.
 
-![alt text](https://imgur.com/IDo6LIC.png)
+![alt text](https://imgur.com/dBHnWRH.png)
 
 
 ## Forgot Passsword
@@ -151,7 +151,7 @@ Enter name, age and gender of each passenger.
 * Once changed, you'll be logged out of the system and have to login using the new password.
 
 
-![alt text](https://imgur.com/zlrbb1h.png)
+![alt text](https://imgur.com/Sddy4yx.png)
 
 
 ## Admin page
