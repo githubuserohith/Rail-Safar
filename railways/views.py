@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from .models import *
 from django.contrib import messages
-from .otp import email_otp, booking_confirmation
+from .otp import email_otp, booking_confirmation, forgot_pwd_email
 from django.core.mail import send_mail
 from datetime import datetime, date, time
 from django.db.models import Q
@@ -393,3 +393,22 @@ def change_pwd(request):
                     return redirect('change_pwd')
 
     return render(request, 'railways/change_pwd.html')
+
+
+def forgot_pwd(request):
+    if request.method == "POST" and request.POST.get('forgot_pwd'):
+        e = request.POST.get('email_name')
+        u = User.objects.filter(email=e).first()
+        if u:
+            print(u.email, u.username)
+            username = u.username
+            otp_str = str(forgot_pwd_email(u.email, u.username))
+            u.delete()
+            new_u = User.objects.create_user(username=username, password=otp_str, email=e)
+            new_u.save()
+            messages.success(request, f" OTP sent to email address: {e}")
+            return redirect('login_view')
+        else:
+            messages.error(request, "Entered email address does not exist. Please Sign up.")
+
+    return render(request, 'railways/forgot_pwd.html')

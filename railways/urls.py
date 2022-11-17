@@ -15,5 +15,6 @@ urlpatterns = [
     path('review/', views.review, name='review'),
     path('history/', views.history, name='history'),
     path('change_pwd/', views.change_pwd, name='change_pwd'),
+    path('forgot_pwd/', views.forgot_pwd, name='forgot_pwd'),
 
 ]

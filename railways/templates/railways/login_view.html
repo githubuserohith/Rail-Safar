@@ -11,7 +11,7 @@
     <input type="text" name="username" placeholder="Username"><br><br>
     <input type="password" name="password" placeholder="Password"><br><br>
     <div class="px-5"><button type="submit" name="submit_login" value="submitted" class="btn btn-success btn-md">Login</button><br><br></div>
-    <div class="px-2"><a href="#">Forgot your password?</a><br></div>
+    <div class="px-2"><a href="{% url 'forgot_pwd' %}">Forgot your password?</a><br></div>
     <div class="px-5"><b>&nbsp;&nbsp;OR</b></div>
     <div class="px-4"><a href="{% url 'otp' %}">Login with otp</a></div><br>
     <div>Not a member? <a href="{% url 'signup' %}">Sign up</a></div>
