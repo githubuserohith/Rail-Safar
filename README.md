@@ -75,6 +75,18 @@ python manage.py createsuperuser --username <username> --password <password>
 
 ![alt text](https://imgur.com/IDo6LIC.png)
 
+
+## Forgot Passsword
+
+* Users who forgot their old password can use this section to login with new passoword/otp, then set a new password of their choice by navigating to "change password" section.
+
+* Only pre existing user (users who have already signed up) can use this feature.
+
+* Enter your email for your old username and new password/otp to be sent. Use these credentials to login.
+
+![alt text](https://imgur.com/XutgkS4.png)
+
+
 ## Search 
 
 * You'll be redirected to this page after logging in.
